@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<script src="/bower_components/dygraphs/dygraph-combined.js"></script>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<form method='post' action='/' enctype="multipart/form-data">
+			<input type='file' name='data'>
+			<input type='submit' value='Upload'>
+		</form>
+		<div id="graphdiv" style="width:90vw; height:70vh;"></div>
+		<div id="labelsDiv"style="width:90vw;font-size:small"></div>
+		<script type="text/javascript">
+		    var data = [];
+			var g = new Dygraph(document.getElementById("graphdiv"), data, {
+						drawPoints: true,
+						showRoller: true,
+						valueRange: [76, 96],
+						connectSeparatedPoints: true,
+						strokeWidth: 3,
+						legend: 'always',
+						labels: ["Time", "a", "b", "c", "d", "e", "f", "g", "h"],
+						labelsDiv: document.getElementById("labelsDiv")
+					});
+
+			var eventSource = new EventSource('http://localhost:3000/stream');
+
+			eventSource.addEventListener('labels', function(event) {
+				var labelStrings = "Time," + event.data;
+				var labels = labelStrings.split(',');
+				console.log('Browser received labels signal: ' + labels);
+				g.updateOptions( { 'labels': labels } );
+			}, false);
+
+			eventSource.addEventListener('message', function(event) {
+				var serieMessage = event.data.split(',');
+				var serieTime = new Date( + serieMessage[0]);
+				var serieIndex = + serieMessage[1];
+				var serieScore = + serieMessage[2];
+				if(serieScore == 0){
+					serieScore = NaN;
+				}
+				var sparseArray = [serieTime, null, null, null, null, null, null, null, null];
+				sparseArray[serieIndex] =  serieScore;
+				console.log(sparseArray);
+				data.push(sparseArray);
+				g.updateOptions( { 'file': data } );
+			}, false);
+			// Explicit close
+			eventSource.addEventListener('close', function(event) {
+				console.log('Browser received close signal: '+event.id, event.data);
+				eventSource.close();
+			}, false);
+			eventSource.onerror = function(event) {
+				console.log('Browser received onerror signal: '+event.id, event.data);
+				eventSource.close();
+			};
+		</script>
+	</body>
+</html>
