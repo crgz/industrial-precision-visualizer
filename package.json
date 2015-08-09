@@ -17,6 +17,7 @@
     "serve-favicon": "~2.3.0",
     "ya-csv": "^0.9.4",
     "fs-extra": "*",
-    "formidable": "*"
+    "formidable": "*",
+    "dygraphs": "*"
   }
 }

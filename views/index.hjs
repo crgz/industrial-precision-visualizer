@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src="/bower_components/dygraphs/dygraph-combined.js"></script>
+<script src="/dygraphs/dygraph-combined.js"></script>
 <html>
 	<head>
 		<title>{{ title }}</title>

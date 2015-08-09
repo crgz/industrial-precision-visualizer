@@ -10,7 +10,7 @@ var routes = require('./routes/index');
 
 var app = express();
 
-//
+// Load mappings
 var path = require('path');
 var filePath = path.join(__dirname, 'filename-mappings.csv'); 
 var Mappings = require(path.join(__dirname, 'libs', 'Mappings.js'));
@@ -21,6 +21,9 @@ mappings.on('end', function(map) {
     console.log(map);
 });
 mappings.process(filePath);
+var uploads = path.join(__dirname, 'uploads'); // Final location the uploaded file 
+app.set('uploads', uploads);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/dygraphs',  express.static(__dirname + '/node_modules/dygraphs'));
 
 app.use('/', routes);
 app.use('/upload', routes);

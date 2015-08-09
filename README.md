@@ -1,6 +1,16 @@
+code-challenge
+==============
+
+A simple systems integration code challenge for candidates.
 
 
-# ${projectname}
+TL;DR version
+-------------
+Parse MRSI_VISION.log and generate plot.png
+
+
+Detailed Instructions
+---------------------
 
 Our engineers would like to have the ability to upload a log file (ex. MRSI_VISION.log) onto a web service/app (your solution) that generates a visualization (i.e. plots the scores onto a time series graph; see example plot, “plot.png”). The log file is from from an automated advanced manufacturing equipment that attaches a lens on an optical engine (a PCB with microelectronics that drives a laser).
 
@@ -14,16 +24,7 @@ Each image-set/series can simply be labelled using their image filenames but you
 
 Feel free to use your favorite scripting language as well as any open source frameworks to get to your solution quickly. If you feel that the solution is not doable in 4 hours or less, feel free to describe your solution approach instead.
 
-## Deliverable
+
+Deliverable
+-----------
 The deliverable is a screencast no more than 15 minutes long walking us through your solution and highlighting areas that were especially challenging or interesting to you. Please submit your solution and screencast in English. Thanks!
-
-## Usage
-
-
-
-## Developing
-
-
-
-### Tools
-

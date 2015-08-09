@@ -29,7 +29,7 @@ router.post('/', function(req, res){
         console.log("File received.");        
         var temp_path = this.openedFiles[0].path; //Temporary location of our uploaded file        
         var file_name = this.openedFiles[0].name; //The file name of the uploaded file
-        var pathname = __dirname + '\\..\\uploads\\' + file_name; // Final location the uploaded file   
+        var pathname = path.join(req.app.get('uploads'),file_name) ; // Final location the uploaded file   
         fsExtra.copy(temp_path, pathname, function(err) {  
             if (! err) {
                 console.log("success!");                
