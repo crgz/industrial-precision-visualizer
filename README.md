@@ -28,3 +28,11 @@ Feel free to use your favorite scripting language as well as any open source fra
 Deliverable
 -----------
 The deliverable is a screencast no more than 15 minutes long walking us through your solution and highlighting areas that were especially challenging or interesting to you. Please submit your solution and screencast in English. Thanks!
+
+Install
+----------
+Running:
+
+	npm install
+
+from inside your app directory (i.e. where package.json is located) will install the dependencies for your app. These will be placed in ./node_modules relative to your package.json file.
