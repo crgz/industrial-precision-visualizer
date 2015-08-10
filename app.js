@@ -21,6 +21,7 @@ mappings.on('end', function(map) {
     console.log(map);
 });
 mappings.process(filePath);
+//Define global upload folder
 var uploads = path.join(__dirname, 'uploads'); // Final location the uploaded file 
 app.set('uploads', uploads);
 

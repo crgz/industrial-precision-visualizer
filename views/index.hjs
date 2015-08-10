@@ -40,7 +40,7 @@
 				var serieIndex = + serieMessage[1];
 				var serieScore = + serieMessage[2];
 				if(serieScore == 0){
-					serieScore = NaN;
+					serieScore = null;
 				}
 				var sparseArray = [serieTime, null, null, null, null, null, null, null, null];
 				sparseArray[serieIndex] =  serieScore;

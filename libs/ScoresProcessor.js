@@ -32,7 +32,7 @@ method.process = function(logEntry) {
 		    this.meassures = {};
 		} else {
 			this.meassures[meassure] = [logEntry.getTime(), logEntry.getScore()];
-			console.log('Storing meassure: '+ meassure + ' Data: ' +this.meassures[meassure]);
+			console.log('Storing meassure: \''+ meassure + '\' Data: ' +this.meassures[meassure]);
 		}	
 	}
 
