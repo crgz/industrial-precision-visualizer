@@ -15,8 +15,14 @@ This solution works as follow:
 
 Installation
 ----------
+From inside your app directory (i.e. where package.json is located) will install the dependencies for your app. These will be placed in ./node_modules relative to your package.json file. On Ubuntu follow the steps described here:
+
+http://timmyreilly.azurewebsites.net/running-node-and-express-on-ubuntu-vm/
+
 Running:
 
-	npm install
+	node bin/www
 
-from inside your app directory (i.e. where package.json is located) will install the dependencies for your app. These will be placed in ./node_modules relative to your package.json file.
+Then open:
+
+	http://localhost:3000/
