@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script src="/dygraphs/dygraph-combined.js"></script>
+<script src="/dygraphs/dist/dygraph.js"></script>
 <html>
 	<head>
 		<title>{{ title }}</title>
