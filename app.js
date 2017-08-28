@@ -30,12 +30,12 @@ var uploads = path.join(__dirname, 'uploads');
 app.set('uploads', uploads);
 
 // Entry point
-var Mappings = require(path.join(__dirname, 'libs', 'Mappings.js'));
-var mappings = new Mappings();
-mappings.process(path.join(__dirname, 'filename-mappings.csv'));
+var ImageMeasurementsFileParser = require(path.join(__dirname, 'libs', 'ImageMeasurementsFileParser.js'));
+var parser = new ImageMeasurementsFileParser();
+parser.process(path.join(__dirname, './main/resources/filename-mappings.csv'));
 
-mappings.on('end', function(map) {
-    console.log('Mappings finished successfully');
+parser.on('end', function(map) {
+    console.log('Data mapping image files with the associated camera measurements has been successfully parsed:');
     app.set('mappings', map);
     console.log(map);
 });
