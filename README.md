@@ -1,3 +1,11 @@
+This an experimental [end to end](https://en.wikipedia.org/wiki/End-to-end_principle) [event streamed](https://en.wikipedia.org/wiki/Event_stream_processing) [real-time data](https://en.wikipedia.org/wiki/Real-time_data) Monitoring tool that leverages on Node.js event-driven, [non-blocking asynchronous I/O](https://en.wikipedia.org/wiki/Asynchronous_I/O) model to push updates using [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events) [time series](https://en.wikipedia.org/wiki/Time_series) to a very simple [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application).
+
+<a href="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg" alt="By Franck Morisseau (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"  align="right" height="250" style="border:5px solid white"/>
+</a>
+
+## 💡 Synopsis
+
 The MRSI_VISION.log file is from from an automated advanced manufacturing equipment that attaches a lens on an optical engine (a PCB with microelectronics that drives a laser).
 
 The equipment/machine accepts a tray of optical engines to which it attaches a lens. After the attachment process, the machine takes 8 pictures of the attached lens at various areas of the assembly and compares these images to their reference images. Based on the slight variances in measurements between the actual image and reference images, the machine assigns a score (from 0 to 100). The higher the score, the closer the result is to the desired specifications.
@@ -9,20 +17,33 @@ Each image file represents a unique "measurement”. So there are a set of 8 uni
 Each image-set/series can simply be labelled using their image filenames but you can refer to the “filename-mappings.csv” to map them to nice names.
 
 This solution works as follow:
-* Upload a log file  onto a web service/app. 
+* Upload a log file  onto a web service/app.
 * Parse and extract the scores from the raw log file.
-* Generates a visualization that plots the scores onto a time series graph. 
+* Generates a visualization that plots the scores onto a time series graph.
 
-Installation
-----------
-From inside your app directory (i.e. where package.json is located) will install the dependencies for your app. These will be placed in ./node_modules relative to your package.json file. On Ubuntu follow the steps described here:
+## 💾 Installation
 
-http://timmyreilly.azurewebsites.net/running-node-and-express-on-ubuntu-vm/
+```bash
+	npm install
+```
+## ⚙️ Execution
 
-Running:
-
+```bash
 	node bin/www
+```
+## ▶️ Usage
 
-Then open:
+* In Google Chrome open: http://localhost:3000.
+* Choose test data file "MRSI_VISION.LOG" located in the doc folder.
+* Click the Upload button.
 
-	http://localhost:3000/
+## 🎁 Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+## 🎓 License
+This experiment is released under the [MIT License](http://www.opensource.org/licenses/MIT).
