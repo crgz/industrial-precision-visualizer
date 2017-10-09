@@ -1,7 +1,7 @@
 This an experimental [end to end](https://en.wikipedia.org/wiki/End-to-end_principle) [event streamed](https://en.wikipedia.org/wiki/Event_stream_processing) [real-time data](https://en.wikipedia.org/wiki/Real-time_data) Monitoring tool that leverages on Node.js event-driven, [non-blocking asynchronous I/O](https://en.wikipedia.org/wiki/Asynchronous_I/O) model to push updates using [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events) [time series](https://en.wikipedia.org/wiki/Time_series) to a very simple [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application).
 
 <a href="https://commons.wikimedia.org/wiki/File:Genesis_laser_harp_beam_output.jpg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg" alt="By Franck Morisseau (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"  align="right" height="250" style="border:5px solid white"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg" alt="By Franck Morisseau (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"  align="right" width="60%" style="border:5px solid white"/>
 </a>
 
 ## 💡 Synopsis
@@ -14,14 +14,14 @@ The “human-parsed-log.xlsx” file is intended to get some sense of what piece
 
 Each image file represents a unique "measurement”. So there are a set of 8 unique measurements (and thus, images) and their resulting scores. Each measurement must be plotted as part of its own series in the chart. The catch is that the set of 8 images can be updated by an engineer when a batch of work is completed. (Meaning, a given set of 8 will be in effect for a period of time than another 8 might be introduced in the log. You can distinguish this change by time increments.)
 
+<img align="left" src="./docs/Peek 2017-10-09 18-01.gif?raw=true" width="60%" style="border:20px solid white">
+
 Each image-set/series can simply be labelled using their image filenames but you can refer to the “filename-mappings.csv” to map them to nice names.
 
 This solution works as follow:
 * Upload a log file  onto a web service/app.
 * Parse and extract the scores from the raw log file.
 * Generates a visualization that plots the scores onto a time series graph.
-
-![Session](docs/Peek 2017-10-09 18-01.gif)
 
 ## 💾 Installation
 
