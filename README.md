@@ -21,6 +21,8 @@ This solution works as follow:
 * Parse and extract the scores from the raw log file.
 * Generates a visualization that plots the scores onto a time series graph.
 
+![Session](docs/Peek 2017-10-09 18-01.gif)
+
 ## 💾 Installation
 
 ```bash
