@@ -1,6 +1,6 @@
 This an experimental [end to end](https://en.wikipedia.org/wiki/End-to-end_principle) [event streamed](https://en.wikipedia.org/wiki/Event_stream_processing) [real-time data](https://en.wikipedia.org/wiki/Real-time_data) Monitoring tool that leverages on Node.js event-driven, [non-blocking asynchronous I/O](https://en.wikipedia.org/wiki/Asynchronous_I/O) model to push updates using [Server-Sent Events](https://en.wikipedia.org/wiki/Server-sent_events) [time series](https://en.wikipedia.org/wiki/Time_series) to a very simple [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application).
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg">
+<a href="https://commons.wikimedia.org/wiki/File:Genesis_laser_harp_beam_output.jpg">
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Genesis_laser_harp_beam_output.jpg" alt="By Franck Morisseau (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"  align="right" height="250" style="border:5px solid white"/>
 </a>
 
