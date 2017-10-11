@@ -1,4 +1,4 @@
-This an [end to end](https://en.wikipedia.org/wiki/End-to-end_principle) [streamed](https://en.wikipedia.org/wiki/Event_stream_processing)
+This is an [end to end](https://en.wikipedia.org/wiki/End-to-end_principle) [streamed](https://en.wikipedia.org/wiki/Event_stream_processing)
  [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application)  that minimize processing time using [non-blocking asynchronous I/O](https://en.wikipedia.org/wiki/Asynchronous_I/O) and visualization time by  [pushing](https://en.wikipedia.org/wiki/Server-sent_events)  [real-time](https://en.wikipedia.org/wiki/Real-time_data) events to a [time series](https://en.wikipedia.org/wiki/Time_series) chart.
 
 <a href="https://commons.wikimedia.org/wiki/File:Genesis_laser_harp_beam_output.jpg">
